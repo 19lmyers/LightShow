@@ -1,0 +1,5 @@
+rootProject.name = 'LightShow'
+include 'api'
+include 'platform-desktop'
+include 'platform-rpi'
+

@@ -1,0 +1,10 @@
+repositories {
+    maven {
+        url = 'https://oss.sonatype.org/content/groups/public'
+    }
+}
+
+dependencies {
+    implementation project(':api')
+    implementation 'com.pi4j:pi4j-core:1.2-SNAPSHOT'
+}

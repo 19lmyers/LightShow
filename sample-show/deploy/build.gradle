@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = 1.8
+
+repositories {
+    maven {
+        url 'https://jitpack.io'
+    }
+    maven {
+        url = 'https://oss.sonatype.org/content/groups/public'
+    }
+}
+
+dependencies {
+    implementation 'com.github.19lmyers.lightshow:api:+'
+    implementation 'com.github.19lmyers.lightshow:platform-rpi:+'
+    
+    implementation rootProject
+}
