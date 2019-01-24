@@ -14,8 +14,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.19lmyers.lightshow:api:+'
-    implementation 'com.github.19lmyers.lightshow:platform-rpi:+'
+    implementation 'com.github.19lmyers.lightshow:api:1.0'
+    implementation 'com.github.19lmyers.lightshow:platform-rpi:1.0'
     
     implementation rootProject
 }

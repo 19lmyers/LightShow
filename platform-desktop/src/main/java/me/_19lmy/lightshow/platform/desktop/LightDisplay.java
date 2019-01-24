@@ -2,17 +2,22 @@ package me._19lmy.lightshow.platform.desktop;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.Objects;
 
+/**
+ * Original LightDisplay code written by Donovan Cunningham
+ * Modified to work with my API interface
+ */
 class LightDisplay extends JFrame {
 
     private JLabel[] pin = new JLabel[26];
 
-    private ImageIcon horizontalOff = new ImageIcon(getClass().getClassLoader().getResource("imgs/horizontalOFF.jpg"));
-    private ImageIcon horizontalOn = new ImageIcon(getClass().getClassLoader().getResource("imgs/horizontalON.jpg"));
-    private ImageIcon starOff = new ImageIcon(getClass().getClassLoader().getResource("imgs/starOFF.jpg"));
-    private ImageIcon starOn = new ImageIcon(getClass().getClassLoader().getResource("imgs/starON.jpg"));
-    private ImageIcon verticalOff = new ImageIcon(getClass().getClassLoader().getResource("imgs/verticalOFF.jpg"));
-    private ImageIcon verticalOn = new ImageIcon(getClass().getClassLoader().getResource("imgs/verticalON.jpg"));
+    private ImageIcon horizontalOff = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("imgs/horizontalOFF.jpg")));
+    private ImageIcon horizontalOn = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("imgs/horizontalON.jpg")));
+    private ImageIcon starOff = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("imgs/starOFF.jpg")));
+    private ImageIcon starOn = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("imgs/starON.jpg")));
+    private ImageIcon verticalOff = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("imgs/verticalOFF.jpg")));
+    private ImageIcon verticalOn = new ImageIcon(Objects.requireNonNull(getClass().getClassLoader().getResource("imgs/verticalON.jpg")));
 
     LightDisplay() {
         super("Simulated Light Show");
@@ -90,15 +95,15 @@ class LightDisplay extends JFrame {
 
         // Place the buttons in different layers
         for (int i = 0; i <= 11; i++) {
-            lp.add(pin[i], new Integer(1));    // vertical
+            lp.add(pin[i], Integer.valueOf(1));    // vertical
         }
 
         for (int i = 12; i <= 19; i++) {
-            lp.add(pin[i], new Integer(2));  // horizontal
+            lp.add(pin[i], Integer.valueOf(2));  // horizontal
         }
 
         for (int i = 20; i <= 25; i++) {
-            lp.add(pin[i], new Integer(3));  // star
+            lp.add(pin[i], Integer.valueOf(3));  // star
         }
 
         setLocationRelativeTo(null);
